@@ -1,0 +1,19 @@
+// Colors
+$deep-blue: 		#0B0042;
+$gray: 				#eeeeee;
+$plum:				#653f5c;
+$brown:				#231b18;
+
+$brand-primary:     #5E3C56;
+
+
+// breakpoints
+$sm-width: 480px;
+$md-width: 768px;
+$lg-width: 1025px;
+
+$fa-font-path: '../vendor/font-awesome/web-fonts-with-css/webfonts';
+
+$theme-colors: (
+    "primary": $brand-primary
+);

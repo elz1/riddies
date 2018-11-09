@@ -1,0 +1,28 @@
+.riddle-holder {
+	border: dashed gray 1px;
+    padding: 15px;
+    .show-answer {
+    	cursor: pointer;
+    	font-size: 12px;
+    	text-decoration: underline;
+    }
+    .hide-answer {
+    	display: none;
+    	cursor: pointer;
+    	font-size: 12px;
+    	text-decoration: underline;
+    }
+    .riddle {
+    	p {
+    		margin: 0;
+    	}
+    }
+    .answer {
+    	filter: blur(10px);
+		transition-property: -webkit-filter;
+		transition-duration: .4s;
+		&.show {
+			filter: blur(0px);
+		}
+    }
+}
