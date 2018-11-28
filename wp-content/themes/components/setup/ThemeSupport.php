@@ -18,6 +18,7 @@ class ThemeSupport
 
         add_action( 'after_setup_theme', array(__CLASS__, 'set_post_thumbnail_size') );
         add_action( 'after_setup_theme', array(__CLASS__, 'set_content_width') );
+        //add_action( 'pre_get_posts', array(__CLASS__, 'custom_post_type_archive' ));
 
     }
 
@@ -28,6 +29,18 @@ class ThemeSupport
      * hard-coded <title> tag in the document head, and expect WordPress to
      * provide it for us.
      */
+
+    
+
+    public static function custom_post_type_archive( $query ) {
+
+    if( $query->is_main_query() && !is_admin() && is_post_type_archive( 'riddle' ) ) {
+
+            $query->set( 'order', 'ASC' );
+        }
+
+    }
+
     public static function add_title_tag_support()
     {
 		add_theme_support( 'title-tag' );

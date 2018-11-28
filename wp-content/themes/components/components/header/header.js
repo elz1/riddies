@@ -11,6 +11,8 @@
 
       $('.open-search').click(function() {
         $('#search-form').toggleClass('open');
+        setTimeout(function(){ $('.search-field').focus(); }, 400);
+        
       });
 
   });
