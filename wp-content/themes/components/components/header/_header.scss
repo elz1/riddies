@@ -28,6 +28,17 @@
 	}
 }
 
+.riddle-count {
+	padding: 5px;
+	display: inline-block;
+	p {
+		text-transform: none;
+		margin: 0;
+		color: white;
+		font-style: italic;
+	}
+}
+
 header{
 	padding: 15px;
 }
@@ -41,6 +52,9 @@ header{
 
 .nav-mobile{
 	float: right;
+	margin-left: auto;
+	margin-right: 40px;
+	margin-top: 28px;
 	@include media-breakpoint-up(md) { 
 		display: none;
 	}	
@@ -103,7 +117,7 @@ header{
 		position: absolute;
 		height: 3px;
 		width: 100%;
-		background: $brand-primary;
+		background: white;
 		border-radius: 0;
 		opacity: 1;
 		left: 0;
@@ -147,36 +161,101 @@ header{
 		}
 	}
 }
-
-.nav-desktop{
-	display: none;
-	@include media-breakpoint-up(md) { 
-		display: block;
-		float: right;
+#menu {
+	>.row {
+		height: 100%;
 	}
+	.nav-desktop{
+		display: none;
+		.site-search {
+			margin-left: auto;
+			position: relative;
+			padding: 0;
+			display: flex;
+			align-items: center;
+			top: 0;
+			i {
+				cursor: pointer;
+			}
+			#search-form {
+				position: absolute;
+				right: 0;
+				top: 30px;
+				width: 0;
+				transition: width .2s ease-out;
+				&.open {
+					width: 190px;
+					transition: width .2s ease-out;
+					.search-submit {
+						display: inline-block;
+					}
+				}
+				form {
+					position: relative;
+					label {
+						margin: 0;
+					}
+				}
+				.search-field {
+					padding: 10px;
+					outline: 0;
+					border: 0;
+					border-radius: 3px;
+				}
+				.search-submit {
+					position: absolute;
+					top: 0;
+					right: 0;
+					height: 100%;
+					background: white;
+					color: $brand-primary;
+					border: 0;
+					outline: 0;
+					font-size: 16px;
+					border-radius: 3px;
+					display: none;
+				}
+			}
+		}
+		@include media-breakpoint-up(md) { 
+			display: flex;
+			width: 100%;
+		}
 
-	ul{
-		list-style: none;
-		margin: 12px 0px 0;
+		ul{
+			list-style: none;
+		    width: 100%;
+			text-align: left;
 
-		li{
-			display: inline;
-			a{
-				display: inline-block;
-				margin: 0 20px;
-				color: $gray;
-				transition: padding 0.3s;
-				@include media-breakpoint-up(md) {
-					font-size: 14px;
+			.search {
+				float: right;
+			}
+
+			li{
+				display: inline;
+				&:hover {
+					a {
+						color: white;
+						transition: color .2s ease-in;
+					}
+				}
+				a{
+					display: inline-block;
+					margin: 0 20px;
+					color: $gray;
+					transition: all 0.3s ease;
+					@include media-breakpoint-up(md) {
+						font-size: 14px;
+					}
+
 				}
 
 			}
-
 		}
-	}
 
-	.sub-menu{
-		display: none;
-	}
+		.sub-menu{
+			display: none;
+		}
 
+	}
 }

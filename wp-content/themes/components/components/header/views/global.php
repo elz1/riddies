@@ -7,7 +7,8 @@
 				<div id="logo" class="branding">
 
 					<h1 class="title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-					<p>Hey Riddle Riddle</p>
+					<p>The Unofficial Companion to the Hey Riddle Riddle Podcast</p>
+					<div class="riddle-count"><p class="text-white"><?php echo wp_count_posts('riddle')->publish; ?> riddles and counting</p></div>
 				</div>
 
 			</div>

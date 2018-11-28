@@ -9,6 +9,10 @@
           $('.utility-menu').fadeToggle();
       });
 
+      $('.open-search').click(function() {
+        $('#search-form').toggleClass('open');
+      });
+
   });
 
 

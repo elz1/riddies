@@ -11,8 +11,8 @@
 					<?php
 					$args = array(
 						'post_type' => 'riddle',
-						'posts_per_page' => 10,
-						'order' => 'rand'
+						'posts_per_page' => 5,
+						'orderby' => 'rand'
 					);
 					$the_query = new WP_Query( $args );
 					if ( $the_query->have_posts() ) : ?>

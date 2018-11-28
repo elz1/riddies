@@ -19,3 +19,14 @@ $button-disabled-bg:#eee;
 		background: $button-disabled-bg;
 	}
 }
+
+.button {
+	padding: 1em 3em 1em 3em;
+	border-radius: 3px;
+	transition: background .2s;
+	&:hover {
+		background: #3f283a;
+		transition: background .2s;
+		color: white;
+	}
+}

@@ -3,3 +3,76 @@
 		background: white;
 	}
 }
+.hero {
+	height: 300px;
+	width: 100%;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.episode {
+	padding: 20px;
+	border: solid 1px white;
+	margin: 20px;
+}
+
+.blog {
+	.pagination {
+		display: block;
+		padding: 20px 0;
+		.nav-links {
+			text-align: center;
+			> * {
+				color: white;
+			}
+			.page-numbers {
+				//@extend button;
+				@extend .btn;
+				border-radius: 3px;
+				background: $brand-primary;
+				border: none;
+				&.current {
+					background: #472d41;
+					cursor: default !important;
+				}
+				&.next {
+					margin-left: 5px;
+				}
+				&.prev {
+					margin-right: 5px;
+				}
+			}
+		}
+	}
+}
+
+.nav-links {
+	.nav-previous {
+		display: inline-block;
+		i {
+			color: $brand-primary;
+			transition: transform .3s ease;
+		}
+		&:hover {
+			i {
+				transform: translateX(-5px);
+				transition: transform .3s ease;
+			}
+		}
+	}
+	.nav-next {
+		float: right;
+		display: inline-block;
+		i {
+			color: $brand-primary;
+			transition: transform .3s ease;
+		}
+		&:hover {
+			i {
+				transform: translateX(5px);
+				transition: transform .3s ease;
+			}
+		}
+	}
+}

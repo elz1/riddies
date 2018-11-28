@@ -9,6 +9,18 @@
 					'menu_class'     	=> 'primary-menu'
 				 ) );
 			?>
+			<div class="site-search">
+				<i class="fas fa-search open-search text-white"></i>
+				<div id="search-form">
+					<form role="search" method="get" class="search-form" action="<?php echo esc_url( home_url( '/' ) ); ?>">
+						<label>
+							<input type="search" class="search-field" placeholder="Search..." value="<?php echo get_search_query(); ?>" name="s" />
+						</label>
+						<button type="submit" class="search-submit"><i class="fas fa-search"></i></button>
+					</form>
+				</div>
+			</div>
+
 
 		</nav>
 

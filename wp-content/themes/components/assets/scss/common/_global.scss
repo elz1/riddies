@@ -9,3 +9,19 @@ img {
 	max-width:100%;
 	height:auto;
 }
+
+.search-content {
+	background: white;
+	padding: 50px 0;
+	.page-title {
+		letter-spacing: 0.20em;
+		font-weight: 700;
+		font-size: 2em;
+		color: #5E3C56;
+		text-transform: uppercase;
+	}
+}
+
+#portfolio-wrapper {
+	padding: 0;
+}

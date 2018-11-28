@@ -21,6 +21,7 @@ Setup\ThemeSupport::init();
 Setup\Widgets::init();
 Setup\Scripts::init();
 Setup\Menus::init();
+Setup\ACF::init();
 
 Setup\PostTypes\Riddle::register();
 Setup\Taxonomies\RiddleType::register();

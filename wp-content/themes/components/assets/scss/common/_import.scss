@@ -2,6 +2,8 @@ html, body {
 	height: 100%;
 }
 
+//purple
+
 body {
 	margin: 0px;
 	padding: 0px;
@@ -188,7 +190,7 @@ hr {
 		letter-spacing: 0.20em;
 		font-weight: 700;
 		font-size: 2em;
-		color: #00AABB;
+		color: #5E3C56;
 	}
 	
 	.title .byline
@@ -212,7 +214,6 @@ hr {
 }
 
 .container {
-	width: 1200px;
 	margin: 0px auto;
 }
 
@@ -296,7 +297,7 @@ hr {
 
 #menu-wrapper
 {
-	background: #00AABB;
+	background: #5E3C56;
 }
 
 #menu {
@@ -334,10 +335,10 @@ hr {
 }
 
 #menu .current_page_item a {
-	background: #008C9A;
+	background: darken(#5E3C56, 10%);
 }
 #menu .current-menu-item a {
-	background: #008C9A;
+	background: darken(#5E3C56, 10%);
 }
 
 /** PAGE */
@@ -491,7 +492,7 @@ hr {
 		display: inline-block;
 		margin-top: 1.5em;
 		padding: 0.50em 3em 0.50em 2em;
-		background: #00AABB;
+		background: #5E3C56;
 		letter-spacing: 0.20em;
 		text-decoration: none;
 		text-transform: uppercase;

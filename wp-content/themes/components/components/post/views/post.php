@@ -8,13 +8,23 @@ if(is_singular('riddle')) :
 
 	else : ?>
 
-
+<?php 
+$omp = get_field('old_man_puzzles');
+if($omp == 'Adal Rifai') : 
+	$twitter = get_field('adal', 'option');
+elseif($omp == 'JPC') : 
+	$twitter = get_field('jpc', 'option');
+elseif($omp == 'Erin Keif') :
+	$twitter = get_field('erin', 'option');
+else : 
+	$twitter = false;
+endif; 
+?>
 	
 	<article <?php post_class(); ?> id="content" >
-
 		<div class="title">
 			<h2><?php the_title(); ?></h2>
-			<h5 class="mt-2"><span class="byline">Old Man Puzzles: <?php the_field('old_man_puzzles'); ?></span></h5>
+			<h5 class="mt-2"><span class="byline">Old Man Puzzles: <?php if($twitter) : ?><a href="<?php echo $twitter; ?>" target="_blank"><?php endif; ?><?php echo $omp; ?><?php if($twitter) : ?></a><?php endif; ?></span></h5>
 		</div>
 
 		<?php the_content(); ?>

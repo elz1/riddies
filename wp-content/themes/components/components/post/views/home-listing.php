@@ -13,7 +13,7 @@
 			<div class="row">
 				<div class="col-12">
 					<div class="title">
-						<h3 style="margin: 0 auto; text-align: center;">Episodes</h3>
+						<h3 style="margin: 0 auto; text-align: center;">Latest Episodes</h3>
 					</div>
 				</div>
 				<div class="col-sm-12">
@@ -25,11 +25,13 @@
 							?>
 
 
-							<div class="col-4">
-								<div class="title">
-									<h2><?php the_title(); ?></h2>
+							<div class="col-12 col-md-4">
+								<div class="py-3">
+									<div class="title">
+										<h2><?php the_title(); ?></h2>
+									</div>
+									<a href="<?php the_permalink(); ?>" class="icon icon-plus-sign button">Read More</a> 
 								</div>
-								<a href="<?php the_permalink(); ?>" class="icon icon-plus-sign button">Read More</a> 
 							</div>
 
 						<?php endwhile; ?>
